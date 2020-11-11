@@ -12,13 +12,59 @@ body {
 h1 {
 	font-size: 2.25rem;
 	font-weight: 300;
+	color: #FFFFFF;
+	margin: 2em; /*big margin relative to the font size (em) to make the big spacing around it.*/
+}
+
+/* the + will affect only the first p after h1 if we put something in bettwen will stop working. */
+h1 + p {
+	font-size: 1.3rem;
+	color: #F18119;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin: 0;
 }
 
 h2 {
 	font-size: 1.3rem;
 }
 
+h2 + p {
+	font-size: 1rem;
+	color: #F18119;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.top-page-text {
+	font-size: 0.625rem;
+	color: #F18119;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.fine-print {
+	font-size: 0.625rem;
+	letter-spacing: 1px;
+}
+
+
 /*h1 is set to 300, to avoid the strong tag to jump to 400 we explicetly define it at 900 */
 strong {
 	font-weight: 900; 
+}
+
+
+/* intro section */
+
+.intro {
+	background-color: #404040; /*will show up in case the image does not load so we still are able to read the white text. */
+	background-image: url(../images/dark-ribs.jpeg);
+	padding: 0 0.25em 1em; /*if we  put padding on top part then .top-text-page cannot go there unless forced.*/
+	display: flex;
+	flex-direction: column;
+}
+
+.top-page-text {
+	order: -1;
 }
