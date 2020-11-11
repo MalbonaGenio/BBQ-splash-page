@@ -27,12 +27,14 @@ h1 + p {
 
 h2 {
 	font-size: 1.3rem;
+	margin: 0;
 }
 
 h2 + p {
 	font-size: 1rem;
 	color: #F18119;
 	font-weight: 900;
+	margin-top: 0;
 	text-transform: uppercase;
 }
 
@@ -60,11 +62,35 @@ strong {
 .intro {
 	background-color: #404040; /*will show up in case the image does not load so we still are able to read the white text. */
 	background-image: url(../images/dark-ribs.jpeg);
-	padding: 0 0.25em 1em; /*if we  put padding on top part then .top-text-page cannot go there unless forced.*/
+	padding: 0 0.25em 2em; /*if we  put padding on top part then .top-text-page cannot go there unless forced.*/
 	display: flex;
 	flex-direction: column;
 }
 
 .top-page-text {
 	order: -1;
+}
+
+/*main content section */
+
+.main-content {
+	padding: 2em 1.5em;
+}
+
+/* media queries */
+
+@media (min-width: 500px) {
+	/* make bigger font sizes for better readability */
+	body {
+		font-size: 1.125rem;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	h1 + p,
+	h2 {
+		font-size: 1.75rem;
+	}
 }
