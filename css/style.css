@@ -1,3 +1,8 @@
+/* border-box makes the width/heigth of the elements to include the padding and the border in the value that we set. Also because we have 100vh in the bigger screens will not create the scrolling effect caused by the padding and border being outside the content. Applying it with the * selector helps to determine all the values better as the border + padding are included with the content.*/
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1rem; /*redundant but helps me to remember it*/
@@ -81,10 +86,11 @@ strong {
 
 /* media queries */
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
 	/* make bigger font sizes for better readability */
 	body {
 		font-size: 1.125rem;
+		display: flex;
 	}
 
 	h1 {
@@ -94,5 +100,13 @@ strong {
 	h1 + p,
 	h2 {
 		font-size: 1.75rem;
+	}
+
+	/* use vh so the height of the elements is set by the browser window */
+	.intro,
+	.main-content {
+		width: 50%;
+		min-height: 100vh; 
+		
 	}
 }
