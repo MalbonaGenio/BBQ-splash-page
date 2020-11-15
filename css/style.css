@@ -93,6 +93,52 @@ strong {
 	margin-right: auto;
 }
 
+/* form */
+.register-form {
+	width: 80%;
+	max-width: 300px;
+}
+
+input,
+.btn {
+	width: 100%; /*to change the default and so they match parent element*/
+	border-radius: 5px;
+	
+}
+
+input {
+	margin-bottom: 0.75em;
+	padding: 0.25em;
+	font-family: inherit; /*by default form does not inherit this properties but we can make it inherit them. */
+	text-align: inherit;
+	border: solid 1px black;
+	transform: scale(1);
+	transition: transform 250ms;
+}
+
+input:focus {
+	transform: scale(1.1);
+}
+.btn {
+	display: inline-block;
+	padding: 0.80em 1.5em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.625rem;
+	color: #fff;
+	font-weight: 900;
+	border: 0;
+	cursor: pointer;
+	background-image: linear-gradient(to left,#ff713b, #ffa51d);
+	transform: scale(1);
+	transition: transform 250ms; /*will create the trasnition of transform both ways*/
+}
+
+.btn:hover,
+.btn:focus {
+	transform: scale(1.1);
+}
+
 /* media queries */
 
 @media (min-width: 600px) {
