@@ -43,10 +43,17 @@ h2 + p {
 }
 
 .top-page-text {
+	margin: 0;
+	padding-top: 2px;
 	font-size: 0.625rem;
 	color: #F18119;
 	font-weight: 900;
 	text-transform: uppercase;
+	border-top: solid 5px #ff713b;
+	border-image: linear-gradient(to left, #ff713b, #ffa51d) 1; /*Because of how border-image works, it wants to take a single image and cut it into 9 regions. The 4 corners, the 4 sides, and the middle.
+	the number 1 here is the border-image-slice, which is setting the distance for the slices to happen (slicing it into 9 regions).
+	Because we used a gradient, we're just putting a value here to make it work, it's not a real image so the slicing of it doesn't really matter.
+	*/
 }
 
 .fine-print {
